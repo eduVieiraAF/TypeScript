@@ -14,11 +14,11 @@
 
 let age: number = 20;
 
-if (age >= 18 && age <= 50) console.log("An adult")
-else if (age < 18 && age >= 11) console.log("The jerk years")
-else if (age < 11) console.log("Keep your nose clean and diaper dry.")
-else console.log("Age's come")
+if (age >= 18) {
+    age = age + 25;
+}
 
+console.log(age)
 
 
 

@@ -11,3 +11,8 @@
     → Shorthand notations
     → contains everything JavaScript has
 */
+var age = 20;
+if (age >= 18) {
+    age = age + 25;
+}
+console.log(age);
