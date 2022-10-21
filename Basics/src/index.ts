@@ -14,7 +14,7 @@
 
 let age: number = 20;
 
-if (age >= 18) {
+if (age < 50) {
     age = age + 25;
 }
 
