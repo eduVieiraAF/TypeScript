@@ -41,15 +41,24 @@ grade = 10;
 grade = "B+"; 
 
 function render(document: any) { // needs annotation when it's a parameter
-    console.log(document)
+    console.log(document);
 }
 
 //* in tsconfig.json you can enable (// "noImplicitAny": true,) and set it to false, but it's not recommended
 
+//* Arrays
+let numbers: number[] = [1, 2, 3, 'four', '5'];  to avoid iteration problems, it's recommended to annotate arrays
+                                                    especially if you're declaring an empty array
+
+let numbers: number[] = [1, 2, 3, ];
+
+numbers.forEach(n => console.log(n));
 */
 
-
-
+//* Tuples
+let user: [number, string] = [40, "Edu"];
+console.log(user);
+console.log(user[1]);
 
 
 
