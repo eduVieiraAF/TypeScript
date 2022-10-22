@@ -1,9 +1,9 @@
 "use strict";
-function calculateTax(income) {
-    if (income > 50000)
-        return income - (income * 0.8);
-    return income - (income * 0.7);
-}
-let pay = calculateTax(82000);
-console.log(pay);
+let employee = {
+    id: 1,
+    name: "Edu",
+    retire: (date) => {
+        console.log(date);
+    }
+};
 //# sourceMappingURL=index.js.map

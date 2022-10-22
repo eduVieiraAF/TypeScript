@@ -93,10 +93,8 @@ switch (httpResponse) {
     case 1:
         console.log(NetworkResponse.Unkown);
 }
-*/
 
 //* Functions
-
 function calculateTax(income: number): number { // return type
     if (income > 50_000) return income - (income * 0.8);
     
@@ -106,4 +104,20 @@ function calculateTax(income: number): number { // return type
 
 let pay = calculateTax(82_000)
 console.log(pay)
+ */
+
+//* Objects 
+
+let employee : {
+    readonly id: number,
+    name: string,
+    age?: number,
+    retire: (date: Date) => void
+} = { 
+    id:1, 
+    name:"Edu",
+    retire: (date: Date) => {
+        console.log(date)
+    }
+};
 
