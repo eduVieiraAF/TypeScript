@@ -53,16 +53,49 @@ let numbers: number[] = [1, 2, 3, 'four', '5'];  to avoid iteration problems, it
 let numbers: number[] = [1, 2, 3, ];
 
 numbers.forEach(n => console.log(n));
-*/
 
 //* Tuples
-let user: [number, string] = [40, "Edu"];
+let user: [number, string] = [40, "Edu"]; // avoid using more than 2 elements
 console.log(user);
 console.log(user[1]);
 
+//* Enums
+enum Size {
+    Small = 1, // Other will be automatically add
+    Mediuam,
+    Large
+}
 
+console.log(Size) // {1: 'Small', 2: 'Mediuam', 3: 'Large', Small: 1, Mediuam: 2, Large: 3}
+let tShirt = ["Yellow", Size.Large]
 
+tShirt.forEach(n => console.log(n))
 
+const enum NetworkResponse { // optmized transpiling
+    Success = "Connected",
+    Error = "Unable to connect",
+    Blocked = "Permission denied",
+    Unkown = "UNKNOWN ERROR"
+}
+
+let httpResponse = 4
+
+switch (httpResponse) {
+    case 4:
+        console.log(NetworkResponse.Success);
+        break;
+    case 3:
+        console.log(NetworkResponse.Blocked);
+        break;
+    case 2:
+        console.log(NetworkResponse.Error);
+        break;
+    case 1:
+        console.log(NetworkResponse.Unkown);
+}
+*/
+
+//* Functions
 
 
 
