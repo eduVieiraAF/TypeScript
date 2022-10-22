@@ -134,11 +134,9 @@ let employee: Empolyee = {
     retire: (date: Date) => console.log(date)
 }
 
-console.log(employee);
-*/
+console.log(employee); 
 
 //* Union types gives a variable or function param different types
-
 function kgToLbs(weight: number | string): number {
     // narrowing
     if (typeof weight === 'number') return weight * 2.2;
@@ -147,3 +145,31 @@ function kgToLbs(weight: number | string): number {
 
 console.log(kgToLbs(25));
 console.log(kgToLbs('25kg'));
+
+//* Intersection Types
+let weight: number & string; // both types but it's practically not a good idea
+
+// Unite them as the following example
+type Draggable = {
+    drag: () => void
+};
+
+type Resizable = {
+    resize: () => void
+};
+
+type UIWidget = Draggable & Resizable;
+
+let button: UIWidget = {
+    drag: () => {},
+    resize: () => {},
+}
+
+//* Literal Types (exact, specific)
+let quantity1: 50 | 100; // can be set to 50 or 100
+
+type Quantity = 50 | 100;
+let quantity: Quantity = 100;
+
+type Metrics = 'cm' | 'inch' | 'yrd';
+*/
