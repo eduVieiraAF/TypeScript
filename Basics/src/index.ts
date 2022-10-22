@@ -173,3 +173,11 @@ let quantity: Quantity = 100;
 
 type Metrics = 'cm' | 'inch' | 'yrd';
 */
+
+//* Nullable Types
+function greet(name:string | null | undefined) {
+    if (name) console.log(name.toUpperCase());
+    else console.log("Empty or null.")
+}
+
+greet(null);
