@@ -108,7 +108,7 @@ console.log(pay)
 
 //* Objects 
 
-let employee : {
+let employeeSimple : {
     readonly id: number,
     name: string,
     age?: number,
@@ -121,3 +121,17 @@ let employee : {
     }
 };
 
+type Empolyee = {
+    readonly id: number,
+    name: string,
+    age?: number,
+    retire: (date: Date) => void
+}
+
+let employee: Empolyee = {
+    id: 1,
+    name: "Edu",
+    retire: (date: Date) => console.log(date)
+}
+
+console.log(employee)
