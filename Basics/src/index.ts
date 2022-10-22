@@ -104,7 +104,7 @@ function calculateTax(income: number): number { // return type
 
 let pay = calculateTax(82_000)
 console.log(pay)
- */
+ 
 
 //* Objects 
 
@@ -134,4 +134,16 @@ let employee: Empolyee = {
     retire: (date: Date) => console.log(date)
 }
 
-console.log(employee)
+console.log(employee);
+*/
+
+//* Union types gives a variable or function param different types
+
+function kgToLbs(weight: number | string): number {
+    // narrowing
+    if (typeof weight === 'number') return weight * 2.2;
+    else return parseInt(weight) * 2.2;
+}
+
+console.log(kgToLbs(25));
+console.log(kgToLbs('25kg'));
