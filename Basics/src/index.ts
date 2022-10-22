@@ -172,12 +172,29 @@ type Quantity = 50 | 100;
 let quantity: Quantity = 100;
 
 type Metrics = 'cm' | 'inch' | 'yrd';
-*/
 
 //* Nullable Types
 function greet(name:string | null | undefined) {
     if (name) console.log(name.toUpperCase());
-    else console.log("Empty or null.")
+    else console.log("Empty or null.");
 }
 
 greet(null);
+*/
+
+//* Optional chaining
+type Customer = {
+    birthday?: Date
+};
+
+function getCustomer(id: number): Customer | null | undefined {
+    return id === 0 ? null: { birthday: new Date() };
+}
+
+let customer = getCustomer(2);
+console.log(customer?.birthday?.getFullYear())
+
+//* Optional element access operator → useful with array
+// customers?.[0];
+
+
