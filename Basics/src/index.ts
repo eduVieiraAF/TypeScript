@@ -97,6 +97,13 @@ switch (httpResponse) {
 
 //* Functions
 
+function calculateTax(income: number): number { // return type
+    if (income > 50_000) return income - (income * 0.8);
+    
+    return income - (income * 0.7);
+}
 
 
+let pay = calculateTax(82_000)
+console.log(pay)
 
